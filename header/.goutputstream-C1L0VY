@@ -1,0 +1,42 @@
+#ifndef BOARD_H
+#define BOARD_H
+
+ int GirdW=SCREEN_WIDTH/3;
+ int GirdH=SCREEN_HEIGHT/2;
+ 
+ int const TILE=32;
+bool generate_btn()
+{
+if(button.empty()){
+		button.push_back(Button());
+		button.push_back(Button());
+		button[0].size(0,0,50,45);
+		button[1].size(60,0,85,45);
+		button[0].position(GirdW+button[0].ins.w,SCREEN_HEIGHT-button[0].ins.h);
+		button[1].position(SCREEN_WIDTH-button[1].ins.w,SCREEN_HEIGHT-button[1].ins.h);
+}		
+return 0;
+}
+
+void onClick(){
+	if(!button.empty()){
+		for(unsigned int x=0;x<button.size();x++){
+			button[x].onClick();
+			}
+		}
+	}
+	
+bool  control(){
+//save button 
+
+//init button 
+
+//help button
+
+//import button
+
+
+return 0;
+}
+
+#endif
